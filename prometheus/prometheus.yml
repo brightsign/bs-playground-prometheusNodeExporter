@@ -29,6 +29,6 @@ scrape_configs:
 
   - job_name: 'node_exporter'
     static_configs:
-      - targets: ['192.168.128.158:9100']
+      - targets: ['169.254.238.94:9100']
         labels:
           model: 'XT2145'
