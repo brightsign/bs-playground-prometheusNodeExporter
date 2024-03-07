@@ -1,6 +1,6 @@
-# brightsign-prometheus-playground
+# BrightSign Prometheus Node Exporter Playground
 
-Playground for using Prometheus Node Exporter on BrightSign players
+Playground for getting started with Prometheus Node Exporter on BrightSign players.
 
 ## Enable the BrightSign player's Prometheus Node Exporter
 
