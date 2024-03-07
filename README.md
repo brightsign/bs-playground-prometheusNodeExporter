@@ -34,3 +34,12 @@ OR
 
 * Install [Docker Engine](https://docs.docker.com/engine/install)
 * Install [Docker Compose](https://docs.docker.com/compose/install/)
+
+## Credentials
+
+By default the `docker-compose.yml` file uses the following credentials for Grafana found in `docker-compose.yml`. These should be updated with your environment variable credentials.
+
+```yaml
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=grafana
+```
