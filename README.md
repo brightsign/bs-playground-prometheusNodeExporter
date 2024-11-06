@@ -27,6 +27,8 @@ Initialize the Prometheus Node Exporter (PNE) on the BrightSign player introduce
 registry write networking prometheus-node-exporter-port 9100
 ```
 
+After the registry key has been set, reboot your player.
+
 ## Docker Installation
 
 This project uses Docker - install from below links if it's not installed on your machine.
