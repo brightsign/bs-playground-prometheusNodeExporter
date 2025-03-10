@@ -1,6 +1,6 @@
 # BrightSign Prometheus Node Exporter Playground
 
-A step-by-step guide to set up monitoring for BrightSign players using Prometheus Node Exporter, Prometheus, and Grafana.
+A step-by-step guide to set up monitoring for BrightSign players using Prometheus Node Exporter and Grafana.
 
 ![Grafana Dashboard](demo.gif)
 
@@ -54,8 +54,8 @@ cd bs-playground-prometheusNodeExporter
 
 ### Step 3: Enable Prometheus Node Exporter on Your BrightSign Player
 
-1. Access your BrightSign player's command shell (either via SSH, serial, or the Diagnostics Web Server terminal)
-2. Run the following command to enable the Prometheus Node Exporter:
+1. Access your BrightSign player's command shell (either via [shell access](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Accessing-the-BrightSign-Shell), [telnet](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Telnet), [SSH](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#SSH), or the Diagnostics Web Server terminal in the registry teb of BA:connected)
+2. Run the following command in one of the suggested access points above to enable the Prometheus Node Exporter:
    ```bash
    registry write networking prometheus-node-exporter-port 9100
    ```
@@ -63,14 +63,10 @@ cd bs-playground-prometheusNodeExporter
    ```bash
    reboot
    ```
-   or
-   ```bash
-   reset
-   ```
 
 ### Step 4: Verify the Node Exporter is Working
 
-1. Find the IP address of your BrightSign player on your local network
+1. Find the IP address of your BrightSign player on your local network. This can be seen when booting up the player without an SD card inserted.
 2. In a web browser, navigate to `http://<your-brightsign-ip>:9100/metrics`
 3. You should see a page of text data - this confirms the Node Exporter is running correctly
 
@@ -160,7 +156,7 @@ curl -I http://localhost:3000
 
 # Additional Information
 
-The sections below provide more details about the project. They're not required reading to get started but may be helpful as you continue using the tool.
+The sections below provide more details about the project. Reading them is not required to get started but may be helpful as you continue using the tool.  
 
 ## Dashboard Details
 
