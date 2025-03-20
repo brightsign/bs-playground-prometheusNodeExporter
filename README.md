@@ -94,7 +94,7 @@ cd bs-playground-prometheusNodeExporter
 
 ### Step 3: Enable Prometheus Node Exporter on Your BrightSign Player
 
-1. Access your BrightSign player's command shell (either via [shell access](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Accessing-the-BrightSign-Shell), [telnet](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Telnet), [SSH](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#SSH), or the Diagnostics Web Server terminal in the registry teb of BA:connected or the local DWS UI)
+1. Access your BrightSign player's command shell (either via [shell access](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Accessing-the-BrightSign-Shell), [telnet](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Telnet), [SSH](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#SSH), or the Diagnostics Web Server terminal in the registry tab of BA:connected or the local DWS UI)
 2. Run the following command in one of the suggested access points above to enable the Prometheus Node Exporter:
    ```bash
    registry write networking prometheus-node-exporter-port 9100
