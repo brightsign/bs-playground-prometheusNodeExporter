@@ -39,6 +39,46 @@ docker --version
 docker compose version
 ```
 
+### Alternative Setup (Without Docker)
+
+If you prefer not to use Docker, you can manually install and run Prometheus and Grafana on your system.
+
+#### Step 1: Install Prometheus
+1. Download the latest Prometheus release for your OS from [Prometheus Downloads](https://prometheus.io/download/).
+2. Extract the archive and move it to a desired directory.
+3. Edit the `prometheus.yml` file and update the `scrape_configs` section with your BrightSign player’s IP address:
+      ```yaml
+      - job_name: 'node_exporter'
+        static_configs:
+             - targets: ['YOUR_BRIGHTSIGN_IP:9100']
+      ```
+4. Start Prometheus by running:
+      ```bash
+      ./prometheus --config.file=prometheus.yml
+      ```
+5. Verify Prometheus is running by opening:
+      ```
+      http://localhost:9090/targets
+      ```
+
+#### Step 2: Install Grafana
+1. Download Grafana from [Grafana Downloads](https://grafana.com/grafana/download).
+2. Follow the installation steps for your OS.
+3. Start Grafana by running:
+      ```bash
+      grafana-server
+      ```
+4. Open a browser and navigate to:
+      ```
+      http://localhost:3000
+      ```
+5. Log in with default credentials (`admin` / `admin`) and add Prometheus as a data source.
+
+#### Step 3: Import the Dashboard
+1. In Grafana, go to “Dashboards” → “Import.”
+2. Upload the provided JSON file or enter the dashboard ID.
+3. Select Prometheus as the data source.
+
 ### Step 2: Download or Clone This Repository
 
 If you're viewing this on GitHub:
@@ -54,7 +94,7 @@ cd bs-playground-prometheusNodeExporter
 
 ### Step 3: Enable Prometheus Node Exporter on Your BrightSign Player
 
-1. Access your BrightSign player's command shell (either via [shell access](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Accessing-the-BrightSign-Shell), [telnet](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Telnet), [SSH](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#SSH), or the Diagnostics Web Server terminal in the registry teb of BA:connected)
+1. Access your BrightSign player's command shell (either via [shell access](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Accessing-the-BrightSign-Shell), [telnet](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#Telnet), [SSH](https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1988100153/BrightSign+Shell#SSH), or the Diagnostics Web Server terminal in the registry tab of BA:connected or the local DWS UI)
 2. Run the following command in one of the suggested access points above to enable the Prometheus Node Exporter:
    ```bash
    registry write networking prometheus-node-exporter-port 9100
