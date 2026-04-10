@@ -117,6 +117,103 @@
       "type": "row"
     },
     {
+  "id": 323,
+  "type": "timeseries",
+  "title": "MemAvailable",
+  "gridPos": {
+    "x": 0,
+    "y": 8,
+    "h": 8,
+    "w": 12
+  },
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "drawStyle": "line",
+        "lineInterpolation": "linear",
+        "barAlignment": 0,
+        "barWidthFactor": 0.6,
+        "lineWidth": 1,
+        "fillOpacity": 0,
+        "gradientMode": "none",
+        "spanNulls": false,
+        "insertNulls": false,
+        "showPoints": "auto",
+        "showValues": false,
+        "pointSize": 5,
+        "stacking": {
+          "mode": "none",
+          "group": "A"
+        },
+        "axisPlacement": "auto",
+        "axisLabel": "",
+        "axisColorMode": "text",
+        "axisBorderShow": false,
+        "scaleDistribution": {
+          "type": "linear"
+        },
+        "axisCenteredZero": false,
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        },
+        "thresholdsStyle": {
+          "mode": "off"
+        }
+      },
+      "color": {
+        "mode": "palette-classic"
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      },
+      "min": 0,
+      "unit": "bytes"
+    },
+    "overrides": []
+  },
+  "pluginVersion": "12.2.1",
+  "targets": [
+    {
+      "editorMode": "code",
+      "expr": "node_memory_MemAvailable_bytes{instance=\"$node\",job=\"$job\"}",
+      "interval": "",
+      "legendFormat": "MemAvailable",
+      "range": true,
+      "refId": "A"
+    }
+  ],
+  "datasource": {
+    "type": "prometheus",
+    "uid": "PBFA97CFB590B2093"
+  },
+  "options": {
+    "tooltip": {
+      "mode": "single",
+      "sort": "none",
+      "hideZeros": false
+    },
+    "legend": {
+      "showLegend": true,
+      "displayMode": "list",
+      "placement": "bottom",
+      "calcs": []
+    }
+  }
+},
+    {
       "datasource": {
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
