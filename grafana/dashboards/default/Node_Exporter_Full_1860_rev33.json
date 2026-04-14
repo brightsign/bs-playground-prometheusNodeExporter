@@ -122,7 +122,7 @@
   "title": "MemAvailable",
   "gridPos": {
     "x": 0,
-    "y": 8,
+    "y": 13,
     "h": 8,
     "w": 12
   },
@@ -184,7 +184,7 @@
     },
     "overrides": []
   },
-  "pluginVersion": "12.2.1",
+  "pluginVersion": "9.4.3",
   "targets": [
     {
       "editorMode": "code",
@@ -197,7 +197,7 @@
   ],
   "datasource": {
     "type": "prometheus",
-    "uid": "PBFA97CFB590B2093"
+    "uid": "${DS_PROMETHEUS}"
   },
   "options": {
     "tooltip": {
