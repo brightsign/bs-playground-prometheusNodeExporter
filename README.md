@@ -14,7 +14,7 @@ This playground provides everything you need to:
 ## Prerequisites
 
 - A computer with internet access (macOS, Windows, or Linux)
-- A BrightSign player running BOS 9.0.126 or later
+- A BrightSign player running BOS 9.0.129 or later (earlier 9.0.x builds ship without the Node Exporter binary on Intel based (raptor) players)
 - The player must be accessible on your local network
 
 ## Quick Setup Guide
@@ -297,7 +297,7 @@ By default, this setup collects metrics every 5 seconds as configured in `promet
 Yes, but you'll need to ensure network connectivity between your monitoring server and the players, which may require VPN or other networking solutions.
 
 ### Will this work with all BrightSign models?
-This should work with any BrightSign player running BOS 9.0.126 or later, which includes the Prometheus Node Exporter functionality.
+This should work with any BrightSign player running BOS 9.0.129 or later, which includes the Prometheus Node Exporter functionality on every current player family. Earlier 9.0.x builds ship without the binary on Intel based (raptor) players.
 
 ## Contributing
 
